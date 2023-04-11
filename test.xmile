@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+    <xmile version="1.0" xmlns="http://docs.oasis-open.org/xmile/ns/XMILE/v1.0">
+        <header>
+            <vendor>Ray Madachy</vendor>
+            <name>Battle Simulator</name>
+            <options>
+                <uses_outputs/>
+            </options>
+            <product version="1.0">PyML .20 dev</product>
+        </header>
+        <sim_specs>
+                <stop>10</stop>
+                <start>0</start>
+                <dt>1</dt>
+        </sim_specs>
+        <model>
+            <variables>
+                <stock name="Level">
+                    <doc>Level</doc>
+                    <inflow>"Pulse"</inflow><inflow>"Ramp"</inflow>
+                    
+                    <eqn>0</eqn>
+                </stock>
+                <flow name="Pulse">
+                    <doc>Pulse</doc>
+                    <eqn>pulse(100, 2)</eqn>
+                </flow>
+                <flow name="Ramp">
+                    <doc>Ramp</doc>
+                    <eqn>ramp(3, 5) </eqn>
+                </flow>
+            </variables>
+        </model>
+    </xmile>
+    
